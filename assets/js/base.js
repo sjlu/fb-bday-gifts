@@ -25,7 +25,9 @@ $(document).ready(function() {
       		xfbml      : true
     	});
 
-		frontpage.login();
+		// frontpage.login();
+        FB.Event.subscribe('auth.login', function(response) { frontpage.login_callback(); }); 
+        FB.getLoginStatus(function(response) { if (response.status === 'connected') frontpage.login_callback(); });
 	};
 
 	(function(d){

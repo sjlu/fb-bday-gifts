@@ -2,21 +2,17 @@ var Frontpage = function()
 {
     var exports = {};
 
-    function login_callback(response)
+    function login_callback()
     {
-        if (response.authResponse) 
-        {   
-            user.lookup();
-            friends.lookup();
-        }
-        else
-            console.log('Authorization failure.');
+        user.lookup();
+        friends.lookup();
     }
+    exports.login_callback = login_callback;
 
     function login()
     {
         var that = this;
-        //FB.login(login_callback, { scope: 'friends_birthday,friends_likes,friends_interests' });
+        FB.login(login_callback, { scope: 'friends_birthday,friends_likes,friends_interests' });
     }
     exports.login = login;
 
