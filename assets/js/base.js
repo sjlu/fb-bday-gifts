@@ -10,11 +10,13 @@
 var friends;
 var frontpage;
 var user;
+var friend;
 
 $(document).ready(function() {
     frontpage = new Frontpage();
     friends = new Friends();
     user = new User();
+    friend = new Friend();
 
 	window.fbAsyncInit = function() {
     	FB.init({

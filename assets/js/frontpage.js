@@ -6,6 +6,8 @@ var Frontpage = function()
     {
         user.lookup();
         friends.lookup();
+
+        $('.fb-login-button').remove();
     }
     exports.login_callback = login_callback;
 

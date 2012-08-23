@@ -7,11 +7,11 @@ var Friend = function()
 		console.log(response);
 	}
 
-	function init(uid)
+	function lookup(uid)
 	{
 		FB.api(uid+'/likes', callback);
 	}
-	exports.init = init;
+	exports.lookup = lookup;
 
 	return exports;
 }
