@@ -16,7 +16,7 @@ var Frontpage = function()
     function login()
     {
         var that = this;
-        FB.login(login_callback, { scope: 'friends_birthday,friends_likes' });
+        FB.login(login_callback, { scope: 'friends_birthday,friends_likes,friends_interests' });
     }
     exports.login = login;
 
