@@ -14,7 +14,7 @@
 	<div id="fb-root"></div>
 
 	<div class="container">
-		<div class="row">
+		<div id="header" class="row">
 			<div id="basket" class="span12">
 				<img src="assets/img/basket.png" alt="basket" />
 				<div class="hero-unit">
@@ -22,12 +22,15 @@
 					<p>We know you don't know your friends well, so what in the world do you get them?</p>
 				</div>
 				<div class="fb-login-button" scope="friends_birthday,friends_likes,friends_interests">Login with Facebook</div>
+				<h2 id="loading-header">Loading...</h2>
 			</div>
 		</div>
 
+		<h2 id="friends-header" style="display:none;">Select A Needy Friend</h2>
 		<ul id="friends" class="thumbnails"></ul>
 
-		<div id="suggestions"></div>
+		<h2 id="suggestions-header" style="display:none;">Select A Gift</h2>
+		<ul id="suggestions" class="thumbnails"></ul>
 	</div>
 
    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

@@ -4,23 +4,34 @@ var Friends = function()
 
 	function write()
 	{
+		$('#loading').remove();
+		$('html, body').animate({scrollTop:$('#friends').offset().top}, 'slow');
+		$('#friends-header').fadeIn();
+
 		for (var i = 0; i < exports.friends.length; i++)
 		{
 			var person = exports.friends[i];
 			var html = '<li class="span3" style="display: none;"><div class="thumbnail"><img src="'+person.pic_big+'" /><h4>'+person.name+'</h4><p><img src="assets/img/gift.png" /> '+person.birthday_date+'</p><a class="btn btn-primary" data-fbid="'+person.uid+'">Find Gifts</a></div></li>';
 
-			$('.thumbnails').append(html);
+			$('#friends').append(html);
 		}
 
-		$('.thumbnails li').fadeIn();
-		$('.thumbnails a').click(function()
+		$('#friends li').fadeIn();
+		$('#friends a').click(function()
 		{
 			friend.lookup($(this).attr('data-fbid'));
+			$('#suggestions-header').fadeIn();
+			$('#suggestions').empty();
+
+			$('#suggestions').css('height', '800px');
+			$('html, body').animate({scrollTop:$('#suggestions-header').offset().top}, 'slow');
 		});
 	}
 
 	function lookup()
 	{
+		$('#header').after('<h1 id="loading">Looking up your friends :)</h1>');
+
 		var timestamp = new Date();
 
 	    var current_timestamp = {

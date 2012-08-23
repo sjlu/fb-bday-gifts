@@ -17,6 +17,7 @@ $(document).ready(function() {
     friends = new Friends();
     user = new User();
     friend = new Friend();
+    gifts = new Gifts();
 
 	window.fbAsyncInit = function() {
     	FB.init({
@@ -30,6 +31,7 @@ $(document).ready(function() {
 		// frontpage.login();
         FB.Event.subscribe('auth.login', function(response) { frontpage.login_callback(); }); 
         FB.getLoginStatus(function(response) { if (response.status === 'connected') frontpage.login_callback(); });
+        $('#loading-header').remove();
 	};
 
 	(function(d){

@@ -16,31 +16,49 @@ body {
 	}
 }
 
-#friends {
-	.thumbnail {
-		text-align: center;
-		background: rgb(255, 255, 255);
-		background: rgba(255, 255, 255, 0.4);
-		border: 0;
+.thumbnail {
+	text-align: center;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.4);
+	border: 0;
+
+	img {
+		margin-top: 8px;
+	}
+
+	p {
+		margin-top: 0;
+		font-size: 22px;
 
 		img {
-			margin-top: 8px;
-		}
-
-		p {
-			margin-top: 0;
-			font-size: 22px;
-
-			img {
-				margin-top: -3px;
-				width: 24px;
-				height: 24px;
-				vertical-align: top;
-			}
-		}
-
-		a {
-			margin-bottom: 5px;
+			margin-top: -3px;
+			width: 24px;
+			height: 24px;
+			vertical-align: top;
 		}
 	}
+
+	a {
+		margin-bottom: 5px;
+	}
+}
+
+#loading {
+	text-align: center;
+}
+
+.fb-login-button {
+	color: transparent;
+}
+
+#friends {
+	margin-top: 20px;
+}
+
+#friends-header {
+	margin-top: 30px;
+}
+
+#suggestions-header {
+	margin-top: 30px;
 }
