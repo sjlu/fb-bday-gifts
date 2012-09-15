@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Don't what to buy for your friends? Let us help!">
+	<meta name="keywords" content="friend, suggestion, gifts, interests">
+
+	<title>Friend Gifter</title>
+
+	<link rel="icon" type="image/png" href="assets/img/gift.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/img/gift.png">
+
+	<link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="fb-root"></div>
+
+	<div class="container">
+		<div id="header" class="row">
+			<div id="basket" class="span12">
+				<img src="assets/img/basket.png" alt="basket" />
+				<div class="hero-unit">
+					<h1>Friend Gifter</h1>
+					<p>We know you don't know your friends well, so what in the world do you get them?</p>
+				</div>
+				<div class="fb-login-button" scope="friends_birthday,friends_likes,friends_interests">Login with Facebook</div>
+				<h2 id="loading-header">Loading...</h2>
+			</div>
+		</div>
+
+		<h2 id="friends-header" style="display:none;">Select A Needy Friend</h2>
+		<ul id="friends" class="thumbnails"></ul>
+
+		<h2 id="suggestions-header" style="display:none;">Select A Gift</h2>
+		<ul id="suggestions" class="thumbnails"></ul>
+	</div>
+
+   	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
